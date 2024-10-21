@@ -6,7 +6,7 @@ interface IPokemonProps {
 
 export const Pokemon = ({ pokemon }: IPokemonProps) => {
   return (
-    <div className="my-10 shadow-md ">
+    <div className="my-10 shadow-lg ">
       <h2 className="text-xl">
         Hej jag heter:{' '}
         <span className="font-bold capitalize">{pokemon.name}</span>
