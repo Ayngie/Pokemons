@@ -1,4 +1,5 @@
 import { PokemonType, pokemons_types } from '../api/pokemons';
+import { getColorForType } from '../utils/pokemonUtils';
 
 interface IPokemonTypeSelectionProps {
   selectType: (type: PokemonType | undefined) => void;
@@ -11,7 +12,12 @@ export const PokemonTypeSelection = ({
 }: IPokemonTypeSelectionProps) => {
   return (
     <div>
-      <h3 className="text-xl font-bold">Vald typ: {selectedType}</h3>
+      <h3 className="text-xl font-bold">
+        Vald typ:{' '}
+        <span className={`${getColorForType(selectedType)} capitalize`}>
+          {selectedType}
+        </span>
+      </h3>
       <select onChange={(e) => selectType(e.target.value as PokemonType)}>
         <option value="">Välj din typ</option>
         {pokemons_types.map((type) => (
