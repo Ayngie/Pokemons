@@ -49,12 +49,13 @@ export const Pokemon = ({ pokemon }: IPokemonProps) => {
       </h2>
       <p>Mitt id är: {pokemon.id}</p>
       <p>
-        Min typ är:
-        {pokemon.type.map((type) => (
+        Min typ är: {''}
+        {pokemon.type.map((type, index) => (
           <span
             key={type}
             className={`${getColorForType(type)} capitalize mx-1`}>
             {type}
+            {index < pokemon.type.length - 1 && ' & '}
           </span>
         ))}
       </p>
