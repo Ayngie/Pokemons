@@ -5,47 +5,33 @@ interface IPokemonProps {
 }
 
 export const Pokemon = ({ pokemon }: IPokemonProps) => {
+  const typeColorMap: { [key: string]: string } = {
+    normal: 'text-green-800',
+    fire: 'text-red-800',
+    water: 'text-blue-800',
+    flying: 'text-blue-400',
+    fighting: 'text-gray-800',
+    poison: 'text-purple-600',
+    electric: 'text-yellow-600',
+    ground: 'text-yellow-600',
+    rock: 'text-gray-800',
+    psychic: 'text-purple-800',
+    ice: 'text-blue-300',
+    bug: 'text-green-600',
+    ghost: 'text-purple-900',
+    steel: 'text-gray-400',
+    dragon: 'text-indigo-800',
+    fairy: 'text-pink-600',
+  };
+
   const getColorForType = (type: string) => {
-    switch (type) {
-      case 'fire':
-        return 'text-red-800';
-      case 'water':
-        return 'text-blue-800';
-      case 'flying':
-        return 'text-blue-400';
-      case 'fighting':
-        return 'text-gray-800';
-      case 'poison':
-        return 'text-purple-600';
-      case 'electric':
-        return 'text-yellow-600';
-      case 'ground':
-        return 'text-yellow-600';
-      case 'rock':
-        return 'text-gray-800';
-      case 'psychic':
-        return 'text-purple-800';
-      case 'ice':
-        return 'text-blue-300';
-      case 'bug':
-        return 'text-green-600';
-      case 'ghost':
-        return 'text-purple-900';
-      case 'steel':
-        return 'text-gray-400';
-      case 'dragon':
-        return 'text-indigo-800';
-      case 'fairy':
-        return 'text-pink-600';
-      default:
-        return 'text-green-800';
-    }
+    return typeColorMap[type] || 'text-gray-800';
   };
   return (
     <div className="my-10 shadow-lg ">
       <h2 className="text-xl">
         Hej! Jag heter: {''}
-        <span className="font-bold capitalize mx-1">{pokemon.name}</span>
+        <span className="font-bold capitalize">{pokemon.name}</span>
       </h2>
       <p>Mitt id är: {pokemon.id}</p>
       <p>
