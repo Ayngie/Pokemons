@@ -7,7 +7,7 @@ interface IPokemonProps {
 
 export const Pokemon = ({ pokemon }: IPokemonProps) => {
   return (
-    <div className="my-10 shadow-lg ">
+    <section className="my-10 shadow-lg ">
       <h2 className="text-xl">
         Hej! Jag heter: {''}
         <span className="font-bold capitalize">{pokemon.name}</span>
@@ -26,6 +26,6 @@ export const Pokemon = ({ pokemon }: IPokemonProps) => {
         <span>Min sprite / bild är:</span>
         <img src={pokemon.sprite} alt={pokemon.name}></img>
       </div>
-    </div>
+    </section>
   );
 };
