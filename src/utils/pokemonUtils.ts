@@ -17,6 +17,6 @@ const typeColorMap: { [key: string]: string } = {
   fairy: 'text-pink-600',
 };
 
-export const getColorForType = (type: string) => {
-  return typeColorMap[type] || 'text-gray-800';
+export const getColorForType = (type?: string | undefined) => {
+  return type ? typeColorMap[type] : 'text-gray-800';
 };
