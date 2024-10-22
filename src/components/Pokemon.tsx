@@ -45,7 +45,7 @@ export const Pokemon = ({ pokemon }: IPokemonProps) => {
     <div className="my-10 shadow-lg ">
       <h2 className="text-xl">
         Hej! Jag heter: {''}
-        <span className="font-bold capitalize">{pokemon.name}</span>
+        <span className="font-bold capitalize mx-1">{pokemon.name}</span>
       </h2>
       <p>Mitt id är: {pokemon.id}</p>
       <p>
