@@ -1,5 +1,6 @@
 const typeColorMap: { [key: string]: string } = {
   normal: 'text-green-800',
+  grass: 'text-green-800',
   bug: 'text-green-600',
   fire: 'text-red-800',
   water: 'text-blue-800',
