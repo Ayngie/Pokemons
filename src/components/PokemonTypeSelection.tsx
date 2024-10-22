@@ -11,7 +11,7 @@ export const PokemonTypeSelection = ({
 }: IPokemonTypeSelectionProps) => {
   return (
     <div>
-      <h3 className="text-xl font-bold">Selected type: {selectedType}</h3>
+      <h3 className="text-xl font-bold">Vald typ: {selectedType}</h3>
       <select onChange={(e) => selectType(e.target.value as PokemonType)}>
         <option value="">Välj din typ</option>
         {pokemons_types.map((type) => (
