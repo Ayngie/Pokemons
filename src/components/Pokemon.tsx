@@ -14,7 +14,7 @@ export const Pokemon = ({ pokemon }: IPokemonProps) => {
       case 'flying':
         return 'text-blue-400';
       case 'fighting':
-        return 'text-grey-800';
+        return 'text-gray-800';
       case 'poison':
         return 'text-purple-600';
       case 'electric':
